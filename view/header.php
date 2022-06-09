@@ -44,7 +44,7 @@
 </script>
 
 <body>
-    <section>
+    <header>
         <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation"/>
         <label for="main-navigation-toggle" onclick="stateAni('checked')">
             <span></span>
@@ -66,5 +66,5 @@
                 </li>
             </ul>
         </nav>
-    </section> 
+    </header> 
 

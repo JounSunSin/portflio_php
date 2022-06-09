@@ -209,13 +209,13 @@
                 </div>           
             </div>
 
-            <div id="footerDiv">
+            <footer id="footerDiv">
                 <div>
                     <a class="self_img_git" href="https://github.com/JounSunSin?tab=repositories"
                     target="_blank" alt="GitHub"></a>
                     <div>&copy; 2022 Web Front-end developer by jong sun Shin</div>
                 </div>
-            </div>
+            </footer>
         </div>
     </section>
 <?php require 'view/footer.php'; ?>
