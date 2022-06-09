@@ -1,0 +1,419 @@
+.siteBox {
+    width: 100%;
+    height: 75%;
+    margin-top: 2vh;    
+}
+
+.site_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.oneBox {
+    width: 100%;
+    height: 65%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.twoBox {
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    color: #fff;
+    text-shadow: rgb(0, 0, 0) 1px 1px 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.site_img1 { background-image: url("../img/site2.webp"); }
+.site_img2 { background-image: url("../img/site6.webp"); }
+.site_img3 { background-image: url("../img/site4.webp"); }
+.site_img4 { background-image: url("../img/site1.webp"); }
+.site_img5 { background-image: url("../img/site5.webp"); }
+.site_img6 { background-image: url("../img/site3.webp"); }
+.site_img7 { background-image: url("../img/site7.webp"); }
+
+.pf_title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: lightgoldenrodyellow;
+}
+
+.pf_lang {
+    color: lightcyan; 
+    font-weight: 900;    
+    font-size: 2rem;
+}
+
+.pf_job, .pf_web {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn_multi {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.pf_btn {
+    display: flex;
+    justify-content:space-evenly;
+}
+.pf_btn > button {
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    font-weight: bold;
+}
+
+.btn {
+    width: 130px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: rgb(255,27,0);
+    background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: transparent;
+    box-shadow:none;
+    text-shadow: black 1px 0 2px;
+}
+
+.btn:before,
+.btn:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+}
+
+.btn:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+
+.btn:hover:before,
+.btn:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+
+/* slider css */
+[type=radio] {
+    display: none;
+}
+
+#slider {
+    height: 100%;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#slider label {
+    margin: auto;
+    width: 50%;
+    height: 90%;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0; right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    background-image: radial-gradient(ellipse at center, rgb(246 114 114) 0%, rgb(253 233 233) 100%)
+}
+
+/* 5개 중 <-- 3번째 라인  1번 선택시 <<< 에 5가 존재한다 */
+#s1:checked ~ #slide5, #s2:checked ~ #slide6,
+#s3:checked ~ #slide7, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2, #s6:checked ~ #slide3,
+#s7:checked ~ #slide4  {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translate3d(-60%,0,-300px);
+}
+
+/* 5개 중 <-- 3번째 라인  1번 선택시 << 에 6가 존재한다 */
+#s1:checked ~ #slide6, #s2:checked ~ #slide7,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3, #s6:checked ~ #slide4,
+#s7:checked ~ #slide5  {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translate3d(-40%,0,-200px);
+}
+
+/* 5개 중 <-- 2번째 라인  1번 선택시 < 에 7가 존재한다 */
+#s1:checked ~ #slide7, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4, #s6:checked ~ #slide5,
+#s7:checked ~ #slide6  {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translate3d(-20%,0,-100px);
+}
+
+/* 가운대 그림자 라인 */
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5, #s6:checked ~ #slide6,
+#s7:checked ~ #slide7  {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translate3d(0,0,0);
+}
+
+/* 5개 중 --> 2번째 라인 1번 선택시 > 에 2가 존재한다 */
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide6, #s6:checked ~ #slide7,
+#s7:checked ~ #slide1 {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translate3d(20%,0,-100px);
+}
+
+/* 5개 중 --> 3번째 라인 1번 선택시 >> 에 3가 존재한다 */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide6,
+#s5:checked ~ #slide7, #s6:checked ~ #slide1,
+#s7:checked ~ #slide2  {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translate3d(40%,0,-200px);
+}
+
+/* 5개 중 --> 3번째 라인 1번 선택시 >> 에 4가 존재한다 */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide6, #s4:checked ~ #slide7,
+#s5:checked ~ #slide1, #s6:checked ~ #slide2,
+#s7:checked ~ #slide3  {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translate3d(60%,0,-300px);
+}
+
+@media (min-width: 1700px) {
+    /* 5개 중 <-- 3번째 라인  1번 선택시 <<< 에 5가 존재한다 */
+    #s1:checked ~ #slide5, #s2:checked ~ #slide6,
+    #s3:checked ~ #slide7, #s4:checked ~ #slide1,
+    #s5:checked ~ #slide2, #s6:checked ~ #slide3,
+    #s7:checked ~ #slide4  {
+        transform: translate3d(-60%,0,-300px);
+    }
+
+    /* 5개 중 <-- 3번째 라인  1번 선택시 << 에 6가 존재한다 */
+    #s1:checked ~ #slide6, #s2:checked ~ #slide7,
+    #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+    #s5:checked ~ #slide3, #s6:checked ~ #slide4,
+    #s7:checked ~ #slide5  {
+        transform: translate3d(-40%,0,-200px);
+    }
+
+    /* 5개 중 <-- 2번째 라인  1번 선택시 < 에 7가 존재한다 */
+    #s1:checked ~ #slide7, #s2:checked ~ #slide1,
+    #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+    #s5:checked ~ #slide4, #s6:checked ~ #slide5,
+    #s7:checked ~ #slide6  {
+        transform: translate3d(-20%,0,-100px);
+    }
+
+    /* 5개 중 --> 2번째 라인 1번 선택시 > 에 2가 존재한다 */
+    #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4, #s4:checked ~ #slide5,
+    #s5:checked ~ #slide6, #s6:checked ~ #slide7,
+    #s7:checked ~ #slide1 {
+        transform: translate3d(20%,0,-100px);
+    }
+
+    /* 5개 중 --> 3번째 라인 1번 선택시 >> 에 3가 존재한다 */
+    #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+    #s3:checked ~ #slide5, #s4:checked ~ #slide6,
+    #s5:checked ~ #slide7, #s6:checked ~ #slide1,
+    #s7:checked ~ #slide2  {
+        transform: translate3d(40%,0,-200px);
+    }
+
+    /* 5개 중 --> 3번째 라인 1번 선택시 >> 에 4가 존재한다 */
+    #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+    #s3:checked ~ #slide6, #s4:checked ~ #slide7,
+    #s5:checked ~ #slide1, #s6:checked ~ #slide2,
+    #s7:checked ~ #slide3  {
+        transform: translate3d(60%,0,-300px);
+    }
+}
+@media (min-width: 1101px) and (max-width: 1699px) {
+    .siteBox {
+        height: 70%;
+        margin-top: 6vh;
+    } 
+
+    #slider label {
+        width: 60%;
+    }
+    /* 5개 중 <-- 3번째 라인  1번 선택시 <<< 에 5가 존재한다 */
+    #s1:checked ~ #slide5, #s2:checked ~ #slide6,
+    #s3:checked ~ #slide7, #s4:checked ~ #slide1,
+    #s5:checked ~ #slide2, #s6:checked ~ #slide3,
+    #s7:checked ~ #slide4  {
+        transform: translate3d(-45%,0,-300px);
+    }
+
+    /* 5개 중 <-- 3번째 라인  1번 선택시 << 에 6가 존재한다 */
+    #s1:checked ~ #slide6, #s2:checked ~ #slide7,
+    #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+    #s5:checked ~ #slide3, #s6:checked ~ #slide4,
+    #s7:checked ~ #slide5  {
+        transform: translate3d(-30%,0,-200px);
+    }
+
+    /* 5개 중 <-- 2번째 라인  1번 선택시 < 에 7가 존재한다 */
+    #s1:checked ~ #slide7, #s2:checked ~ #slide1,
+    #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+    #s5:checked ~ #slide4, #s6:checked ~ #slide5,
+    #s7:checked ~ #slide6  {
+        transform: translate3d(-15%,0,-100px);
+    }
+
+    /* 5개 중 --> 2번째 라인 1번 선택시 > 에 2가 존재한다 */
+    #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4, #s4:checked ~ #slide5,
+    #s5:checked ~ #slide6, #s6:checked ~ #slide7,
+    #s7:checked ~ #slide1 {
+        transform: translate3d(15%,0,-100px);
+    }
+
+    /* 5개 중 --> 3번째 라인 1번 선택시 >> 에 3가 존재한다 */
+    #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+    #s3:checked ~ #slide5, #s4:checked ~ #slide6,
+    #s5:checked ~ #slide7, #s6:checked ~ #slide1,
+    #s7:checked ~ #slide2  {
+        transform: translate3d(30%,0,-200px);
+    }
+
+    /* 5개 중 --> 3번째 라인 1번 선택시 >> 에 4가 존재한다 */
+    #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+    #s3:checked ~ #slide6, #s4:checked ~ #slide7,
+    #s5:checked ~ #slide1, #s6:checked ~ #slide2,
+    #s7:checked ~ #slide3  {
+        transform: translate3d(45%,0,-300px);
+    }
+
+}
+
+@media (min-width:750px) and (max-width:1100px) {
+    .siteBox {
+        height: 70%;
+        margin-top: 6vh;
+    } 
+    .oneBox { background-size: 100% 100%; }
+
+    .pf_title { 
+        font-size: 2.3rem;
+    }
+    .pf_job, .pf_web, .pf_lang { font-size: 1.7rem } 
+    .pf_btn > button { 
+        width: 130px;
+        padding: 10px 10px; 
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 749px) {
+    .siteBox { margin-top: 0; }
+    #slider {
+        height: 85%; 
+        margin-top: 7vh;
+    }
+    #slider label {
+        width: 70%;
+    }
+
+    .pf_title { 
+        font-size: 1.5rem;
+    }
+
+    .pf_lang { 
+        font-size: 1.3rem; 
+    }
+    .pf_job, .pf_web { 
+        font-size: 1.1rem;
+    } 
+    .pf_btn > button { 
+        font-size: 12px;
+        width: 80px;
+        height: 35px;
+        padding: 0px; 
+    }
+
+    /* 5개 중 <-- 3번째 라인  1번 선택시 <<< 에 5가 존재한다 */
+    #s1:checked ~ #slide5, #s2:checked ~ #slide6,
+    #s3:checked ~ #slide7, #s4:checked ~ #slide1,
+    #s5:checked ~ #slide2, #s6:checked ~ #slide3,
+    #s7:checked ~ #slide4  {
+        transform: translate3d(-40%,0,-300px);
+    }
+
+    /* 5개 중 <-- 3번째 라인  1번 선택시 << 에 6가 존재한다 */
+    #s1:checked ~ #slide6, #s2:checked ~ #slide7,
+    #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+    #s5:checked ~ #slide3, #s6:checked ~ #slide4,
+    #s7:checked ~ #slide5  {
+        transform: translate3d(-30%,0,-200px);
+    }
+
+    /* 5개 중 <-- 2번째 라인  1번 선택시 < 에 7가 존재한다 */
+    #s1:checked ~ #slide7, #s2:checked ~ #slide1,
+    #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+    #s5:checked ~ #slide4, #s6:checked ~ #slide5,
+    #s7:checked ~ #slide6  {
+        transform: translate3d(-20%,0,-100px);
+    }
+
+    /* 5개 중 --> 2번째 라인 1번 선택시 > 에 2가 존재한다 */
+    #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4, #s4:checked ~ #slide5,
+    #s5:checked ~ #slide6, #s6:checked ~ #slide7,
+    #s7:checked ~ #slide1 {
+        transform: translate3d(20%,0,-100px);
+    }
+
+    /* 5개 중 --> 3번째 라인 1번 선택시 >> 에 3가 존재한다 */
+    #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+    #s3:checked ~ #slide5, #s4:checked ~ #slide6,
+    #s5:checked ~ #slide7, #s6:checked ~ #slide1,
+    #s7:checked ~ #slide2  {
+        transform: translate3d(30%,0,-200px);
+    }
+
+    /* 5개 중 --> 3번째 라인 1번 선택시 >> 에 4가 존재한다 */
+    #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+    #s3:checked ~ #slide6, #s4:checked ~ #slide7,
+    #s5:checked ~ #slide1, #s6:checked ~ #slide2,
+    #s7:checked ~ #slide3  {
+        transform: translate3d(40%,0,-300px);
+    }
+}
