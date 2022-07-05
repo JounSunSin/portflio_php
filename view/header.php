@@ -14,13 +14,13 @@
 
         <!-- css / script -->
         <link rel="stylesheet" href="css/main.css" type="text/css" media="all">
-        <script src="js/common.js" type="text/javascript"></script>
+        <script defer src="js/common.js" type="text/javascript"></script>
 
         <!-- plugin / font cdn -->
         <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script defer src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
         <title>JongSun PortFlio</title>
 </head>
